@@ -1,11 +1,9 @@
-// Seleciona os elementos
 const formOcorrencia = document.getElementById('formOcorrencia');
 const nomeAlunoInput = document.getElementById('nomeAluno');
 const dataOcorrenciaInput = document.getElementById('dataOcorrencia');
 const descricaoOcorrenciaInput = document.getElementById('descricaoOcorrencia');
 const ocorrenciasList = document.getElementById('ocorrenciasList');
 
-// Função para adicionar ocorrência na lista
 function adicionarOcorrencia(event) {
     event.preventDefault();
 
@@ -32,7 +30,6 @@ function adicionarOcorrencia(event) {
     formOcorrencia.reset();
 }
 
-// Função para excluir ocorrência
 function excluirOcorrencia(event) {
     if (event.target.classList.contains('delete-btn')) {
         const item = event.target.closest('li');
@@ -42,6 +39,5 @@ function excluirOcorrencia(event) {
     }
 }
 
-// Eventos
 formOcorrencia.addEventListener('submit', adicionarOcorrencia);
 ocorrenciasList.addEventListener('click', excluirOcorrencia);
